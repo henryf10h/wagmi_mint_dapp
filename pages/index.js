@@ -56,13 +56,8 @@ export default function Home() {
   return (
     
     <div className='main'>
+      <div className='ticket'></div>
       <div className='home'>
-        <h1>
-          GIF
-        </h1>
-        <h6>
-          Getting closer bro
-        </h6>
         <ConnectButton
           accountStatus={{
             smallScreen: 'avatar',
@@ -71,15 +66,17 @@ export default function Home() {
         />
         {!isDisconnected && (
           <>
-          <div>
-              <button onClick={(e) => {
+          <div className='options'>
+              <button className='minus' onClick={(e) => {
                 e.preventDefault()
                 decrementMintAmount()
               }}>
                 -
               </button>
+
               <input type="text" value={mintAmount} readOnly/>
-              <button onClick={(e) => {
+
+              <button className='plus' onClick={(e) => {
                 e.preventDefault()
                 incrementMintAmount()
               }}>
@@ -87,7 +84,6 @@ export default function Home() {
               </button>
           </div>
           <button
-                style={{ marginTop: 24 }}
                 className="button" 
                 onClick={() => write?.()}
               >

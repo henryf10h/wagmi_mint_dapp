@@ -7,7 +7,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { useAccount, usePrepareContractWrite, useContractWrite } from 'wagmi'
 import { useEffect,useState } from 'react'
 import abi from '../contract-abi.json'
-import { optimismGoerli } from 'wagmi/chains';
+import { optimism, optimismGoerli } from 'wagmi/chains';
 
 
 export default function Home() {
@@ -36,11 +36,11 @@ export default function Home() {
     };
 
   const {config} = usePrepareContractWrite({
-    address: '0x025ACcdB95F52cDD3C62a533C578B4569b6EbA7C',
+    address: '0x71ac43CFd2b8eeBb2205FF7f8859cB1f30C9fba4',
     abi: abi,
     enabled: true,
     functionName: 'mint',
-    chainId: optimismGoerli.id,
+    chainId: optimism.id,
     args:[mintAmount],
 })   
 

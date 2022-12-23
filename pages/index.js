@@ -36,7 +36,7 @@ export default function Home() {
     };
 
   const {config} = usePrepareContractWrite({
-    address: '0xe6b4E492cB57473b7Fd2Be9C0e51020A293c015E',
+    address: '0x025ACcdB95F52cDD3C62a533C578B4569b6EbA7C',
     abi: abi,
     enabled: true,
     functionName: 'mint',
@@ -56,16 +56,15 @@ export default function Home() {
   return (
     
     <div className='main'>
-      <div className='ticket'></div>
-      <div className='home'>
         <ConnectButton
           accountStatus={{
             smallScreen: 'avatar',
             largeScreen: 'full',
           }}
         />
-        {!isDisconnected && (
-          <>
+      <h1 className='title'>Mint a NFT ticket totally free</h1>
+      <div className='ticket'></div>
+      <div className='home'>
           <div className='options'>
               <button className='minus' onClick={(e) => {
                 e.preventDefault()
@@ -88,9 +87,7 @@ export default function Home() {
                 onClick={() => write?.()}
               >
                 mint
-              </button>
-
-          </> )}
+          </button>
       </div>
     </div>
     

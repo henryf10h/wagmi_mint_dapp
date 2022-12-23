@@ -4,6 +4,7 @@ import '@rainbow-me/rainbowkit/styles.css';
 import {
   getDefaultWallets,
   RainbowKitProvider,
+  darkTheme,
 } from '@rainbow-me/rainbowkit';
 import {
   chain,
@@ -35,7 +36,10 @@ function MyApp({ Component, pageProps }) {
   return( 
   <>
   <WagmiConfig client={wagmiClient}>
-    <RainbowKitProvider chains={chains}>
+    <RainbowKitProvider chains={chains} theme={darkTheme({
+      ...darkTheme.accentColors.green,
+
+    })}>
        <Component {...pageProps} />
     </RainbowKitProvider>
   </WagmiConfig>

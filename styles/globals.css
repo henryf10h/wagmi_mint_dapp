@@ -48,9 +48,9 @@
     display: flex;
     background-image: url('../assets/flydapp.gif');
     background-position: center;
-    background-size:16rem 17rem;
-    height: 17rem;
-    width: 16rem;
+    background-size: 100% 100%;
+    height: 30vh;
+    width: 50vw;
     border-radius: 10px;
     box-shadow: 0 5px 10px black ;
     margin: 1rem;
